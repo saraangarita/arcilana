@@ -1,0 +1,71 @@
+/* ===============================
+   HEADER HERO – IMAGEN + TÍTULO
+================================ */
+
+.header-hero {
+  width: 100%;
+  height: 90vh;
+  min-height: 520px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CAPA OSCURA PARA MEJORAR TEXTO */
+
+.header-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
+/* TÍTULO PRINCIPAL */
+
+.header-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+/* SUBTÍTULO */
+
+.header-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: #f5f5f5;
+  max-width: 720px;
+  line-height: 1.5;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .header-hero {
+    height: 75vh;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .header-hero {
+    height: 65vh;
+    min-height: 420px;
+  }
+
+  .header-title {
+    letter-spacing: 1px;
+  }
+}

@@ -1,0 +1,61 @@
+.nosotros {
+  width: 100%;
+  background-color: #fff3cf;
+  padding: 5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.nosotros-content {
+  width: 100%;
+  max-width: 680px; /* más aire para lectura */
+  text-align: center;
+}
+
+/* IMAGEN */
+.nosotros-img {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  margin: 0 auto 2.5rem;
+  display: block;
+}
+
+/* TEXTO ESTILIZADO */
+.nosotros-text {
+  font-size: 1.6rem; /* más grande */
+  font-weight: 700; /* negro fuerte */
+  line-height: 2;
+  color: #000; /* negro puro */
+  max-width: 560px;
+  margin: 0 auto;
+  letter-spacing: 0.3px; /* look editorial */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nosotros {
+    padding: 4rem 1rem;
+  }
+
+  .nosotros-img {
+    max-width: 280px;
+  }
+
+  .nosotros-text {
+    font-size: 1.3rem;
+    line-height: 1.9;
+  }
+}
+
+@media (max-width: 480px) {
+  .nosotros-img {
+    max-width: 240px;
+  }
+
+  .nosotros-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+  }
+}

@@ -1,0 +1,96 @@
+/* ===============================
+   NAVBAR – MARCA DE MODA
+================================ */
+
+.navbar {
+  background-color: #000;
+  padding: 2.6rem 2rem; /* 👈 más alto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+/* LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem; /* 👈 más separación */
+  margin: 0;
+  padding: 0;
+}
+
+/* BOTONES */
+.nav-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem; /* 👈 más grande */
+  font-weight: 500;
+  letter-spacing: 0.04em; /* 👈 look editorial */
+  cursor: pointer;
+  padding: 0.8rem 1.4rem; /* 👈 más aire */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover {
+  color: rgb(184, 89, 89);
+  transform: translateY(-2px);
+}
+
+/* ACTIVO */
+.nav-link.active .nav-btn {
+  color: #800020;
+  font-weight: 600;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  position: absolute;
+  right: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.8rem; /* 👈 más visible */
+  cursor: pointer;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 2rem 1.5rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .nav-btn {
+    font-size: 1.4rem;
+    padding: 1rem 0;
+  }
+}
