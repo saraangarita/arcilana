@@ -1,0 +1,114 @@
+.contacto {
+  width: 100%;
+  padding: 110px 20px;
+  background: #fff3cf;
+  display: flex;
+  justify-content: center;
+}
+
+.contacto-contenido {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Título */
+.contacto-titulo {
+  font-size: clamp(2.5rem, 5vw, 3.4rem);
+  font-weight: 900;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+/* Línea decorativa */
+.contacto-linea {
+  width: 90px;
+  height: 4px;
+  background: #000;
+  margin: 24px auto 44px;
+  border-radius: 10px;
+}
+
+/* Texto */
+.contacto-descripcion {
+  font-size: 1.3rem;
+  line-height: 1.9;
+  color: #000;
+  font-weight: 700;
+  max-width: 720px;
+  margin: 0 auto 55px;
+}
+
+/* Botón */
+.contacto-boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  background-color: #25d366;
+  color: white;
+  padding: 24px 54px;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 18px 35px rgba(37, 211, 102, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contacto-boton img {
+  width: 40px;
+  height: 40px;
+}
+
+.contacto-boton:hover {
+  transform: scale(1.08);
+  box-shadow: 0 24px 50px rgba(37, 211, 102, 0.6);
+}
+
+/* Barra de información */
+.contacto-info {
+  margin-top: 70px;
+  padding-top: 35px;
+  border-top: 2px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: 800;
+}
+
+/* Íconos + texto */
+.contacto-info span {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 1.25rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .contacto {
+    padding: 90px 20px;
+  }
+
+  .contacto-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contacto-descripcion {
+    font-size: 1.15rem;
+  }
+
+  .contacto-boton {
+    padding: 20px 40px;
+    font-size: 1.1rem;
+  }
+
+  .contacto-boton img {
+    width: 32px;
+    height: 32px;
+  }
+}

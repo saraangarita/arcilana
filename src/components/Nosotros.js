@@ -14,8 +14,21 @@ function Nosotros() {
 
         <p className="nosotros-text">
           Creemos que la arcilla es un material mágico que transforma y llena el
-          espíritu de creatividad. Cada pieza cuenta una historia y conecta con
-          la belleza de lo simple.
+          espíritu de la creatividad. Cada pieza tiene una historia que contar,
+          al conectar con la belleza de lo simple.
+        </p>
+
+        <p className="nosotros-text">
+          Para mí, la arcilla es más que un material, es una extensión de mi
+          infancia, de esos momentos en que pintaba con colores vibrantes y
+          dejaba volar la imaginación. Trabajar con mis manos ha sido mi
+          refugio.
+        </p>
+
+        <p className="nosotros-text">
+          Cada trazo, cada textura, cada detalle está impregnado de mi esencia y
+          de la pasión por crear algo único. En cada pieza hay un pedacito de mi
+          corazón y el deseo de inspirarte a crear.
         </p>
       </div>
     </section>

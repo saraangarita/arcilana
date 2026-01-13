@@ -1,0 +1,88 @@
+.productos-container {
+  padding: 40px;
+}
+
+/* LISTA */
+.lista-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.producto-card {
+  border: 1px solid #eee;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: #fff;
+}
+
+.producto-card:hover {
+  transform: scale(1.05);
+}
+
+.producto-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.producto-card h3 {
+  margin: 10px 0 5px;
+}
+
+.precio {
+  color: #7b1e3a; /* vino tinto */
+  font-weight: bold;
+}
+
+/* DETALLE */
+.detalle-producto {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+  align-items: flex-start;
+}
+
+.imagen-container {
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.imagen-container img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.info-producto {
+  max-width: 420px;
+}
+
+.descripcion {
+  margin: 15px 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.zoom-controles {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.zoom-controles button {
+  padding: 8px 16px;
+  font-size: 18px;
+  border: none;
+  background-color: #7b1e3a;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.zoom-controles button:hover {
+  opacity: 0.9;
+}
