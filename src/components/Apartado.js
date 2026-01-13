@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Apartado.css";
 
 import img1 from "../Assets/accesorios.png";
@@ -16,6 +16,15 @@ function Apartado() {
   const prev = () => {
     setIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
+
+  /* AUTOPLAY */
+  useEffect(() => {
+    const interval = setInterval(() => {
+      next();
+    }, 5000); // ⏱ cada 5 segundos
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="apartado">
