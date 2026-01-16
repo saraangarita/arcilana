@@ -107,3 +107,34 @@
   background-color: #1ebe5d;
   transform: scale(1.06);
 }
+/* ===============================
+   WHATSAPP BUTTON – MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .whatsapp-button-bottom {
+    bottom: 16px;
+    right: 16px;
+
+    /* Más compacto */
+    padding: 14px 20px;
+    font-size: 0.95rem;
+
+    /* Mejor ajuste visual */
+    border-radius: 40px;
+    gap: 10px;
+  }
+
+  .whatsapp-button-bottom img {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* MOBILE PEQUEÑO */
+@media (max-width: 480px) {
+  .whatsapp-button-bottom {
+    padding: 12px 18px;
+    font-size: 0.85rem;
+  }
+}

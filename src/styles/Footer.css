@@ -1,8 +1,9 @@
 .footer {
   background-color: #000;
   color: #fff;
-  padding: 3rem 1.5rem 1.5rem;
+  padding: 4rem 2rem 2rem;
   width: 100%;
+  text-align: center;
 }
 
 /* CONTENEDOR */
@@ -10,82 +11,115 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 3rem;
   flex-wrap: wrap;
 }
 
 /* SECCIONES */
 .footer-section {
-  flex: 1 1 250px;
-  text-align: left;
+  flex: 1 1 280px;
+  text-align: center;
 }
 
 /* TÍTULOS */
 .footer-title {
   font-family: "Abril Fatface", sans-serif;
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
+  font-size: 2rem; /* MÁS GRANDE */
+  margin-bottom: 1.5rem;
 }
 
 /* ITEMS */
 .footer-item {
   display: flex;
   align-items: center;
-  margin: 0.5rem 0;
-  font-size: 0.95rem;
+  justify-content: center;
+  margin: 0.8rem 0;
+  font-size: 1.2rem; /* TEXTO MÁS GRANDE */
 }
 
 .footer-item i {
-  margin-right: 0.6rem;
+  margin-right: 0.8rem;
+  font-size: 1.4rem; /* ICONOS MÁS GRANDES */
 }
 
 /* REDES */
 .social-icons {
   display: flex;
-  gap: 1rem;
-  font-size: 1.6rem;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 2.2rem; /* ICONOS GRANDES */
 }
 
 .social-icons a {
   color: white;
-  transition: opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .social-icons a:hover {
   opacity: 0.7;
+  transform: scale(1.1);
 }
 
 /* HORARIO */
 .horario-info {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
 
 /* COPYRIGHT */
 .copyRight {
-  margin-top: 2rem;
+  margin-top: 3rem;
   text-align: center;
-  font-size: 0.85rem;
-  opacity: 0.8;
+  font-size: 1.08rem;
+  opacity: 0.85;
 }
 
 /* ===============================
    RESPONSIVE
 ================================ */
 @media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1.2rem 1.4rem;
+  }
+
   .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    gap: 1.2rem; /* compacto entre bloques */
   }
 
   .footer-section {
-    text-align: center;
+    margin: 0; /* evita espacios extra */
+  }
+
+  .footer-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .footer-item {
+    font-size: 0.95rem;
+    margin: 0.25rem 0;
+  }
+
+  .footer-item i {
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+  }
+
+  .horario-info {
+    font-size: 0.95rem;
+    line-height: 1.4;
   }
 
   .social-icons {
-    justify-content: center;
+    font-size: 1.5rem;
+    gap: 1rem;
+    margin-top: 0.4rem;
+  }
+
+  .copyRight {
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
   }
 }
