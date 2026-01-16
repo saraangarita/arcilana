@@ -4,33 +4,40 @@
 
 .navbar {
   background-color: #000;
-  padding: 2.6rem 2rem; /* 👈 más alto */
+  padding: 2.6rem 2rem; /* alto del navbar */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 100%;
+  z-index: 999; /* 🔥 evita que el header lo tape */
 }
 
-/* LINKS */
+/* ===============================
+   LINKS DESKTOP
+================================ */
+
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 3rem; /* 👈 más separación */
+  gap: 3rem;
   margin: 0;
   padding: 0;
 }
 
-/* BOTONES */
+/* ===============================
+   BOTONES
+================================ */
+
 .nav-btn {
   background: none;
   border: none;
   color: #fff;
-  font-size: 1.6rem; /* 👈 más grande */
+  font-size: 1.6rem;
   font-weight: 500;
-  letter-spacing: 0.04em; /* 👈 look editorial */
+  letter-spacing: 0.04em;
   cursor: pointer;
-  padding: 0.8rem 1.4rem; /* 👈 más aire */
+  padding: 0.8rem 1.4rem;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
@@ -39,13 +46,16 @@
   transform: translateY(-2px);
 }
 
-/* ACTIVO */
-.nav-link.active .nav-btn {
+/* ACTIVO CORREGIDO */
+.nav-btn.active {
   color: #800020;
   font-weight: 600;
 }
 
-/* BOTÓN HAMBURGUESA */
+/* ===============================
+   BOTÓN HAMBURGUESA
+================================ */
+
 .menu-toggle {
   display: none;
   position: absolute;
@@ -53,13 +63,15 @@
   background: none;
   border: none;
   color: white;
-  font-size: 2.8rem; /* 👈 más visible */
+  font-size: 2.8rem;
   cursor: pointer;
+  z-index: 1001;
 }
 
 /* ===============================
    MOBILE
 ================================ */
+
 @media (max-width: 768px) {
   .navbar {
     padding: 2rem 1.5rem;
@@ -72,13 +84,15 @@
   .nav-links {
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     background-color: #000;
     flex-direction: column;
     width: 100%;
     text-align: center;
+
+    /* 🔥 clave */
     display: none;
-    padding: 1rem 0;
+    z-index: 1000;
   }
 
   .nav-links.active {

@@ -13,11 +13,11 @@ function Footer() {
           </p>
           <p className="footer-item">
             <i className="fas fa-phone"></i>
-            +1 (555) 987-6543
+            +57 3225099012
           </p>
           <p className="footer-item">
             <i className="fas fa-envelope"></i>
-            contacto@arcilana.com
+            luzdanielaangarita@gmail.com
           </p>
         </div>
 
@@ -49,7 +49,7 @@ function Footer() {
           <p className="horario-info">
             Lunes a Viernes: 9:00 AM - 6:00 PM
             <br />
-            Sábado: 10:00 AM - 4:00 PM
+            Sábado: cerrado
             <br />
             Domingo: Cerrado
           </p>
