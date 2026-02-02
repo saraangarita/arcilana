@@ -30,6 +30,8 @@
 
 .producto-card h3 {
   margin: 10px 0 5px;
+  color: #7b1e3a; 
+  font-weight: 500;
 }
 
 .precio {
