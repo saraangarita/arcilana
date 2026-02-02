@@ -60,10 +60,20 @@
 
 .apartado-arrow.left {
   left: 24px;
+  background: none;
+}
+.apartado-arrow.left img{
+  width: 70px;
+  height: 70px;
 }
 
 .apartado-arrow.right {
   right: 24px;
+  background: none;
+}
+.apartado-arrow.right img{
+  width: 70px;
+  height: 70px;
 }
 
 /* ===============================
