@@ -26,7 +26,7 @@ function Footer() {
           <div className="social-icons">
             {/* Instagram real */}
             <a
-              href="https://www.instagram.com/arcilanastudio/"
+              href="https://www.instagram.com/arcilanastudio______?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noopener noreferrer"
             >
