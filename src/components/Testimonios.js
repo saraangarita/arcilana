@@ -32,9 +32,12 @@ function Testimonios() {
 
   /* AUTOPLAY */
   useEffect(() => {
-    const interval = setInterval(next, 5000);
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev === testimonios.length - 1 ? 0 : prev + 1));
+    }, 5000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, [testimonios.length]);
 
   return (
     <section className="testimonios">
