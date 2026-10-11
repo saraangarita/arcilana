@@ -1,0 +1,84 @@
+/* ═══════════════════════════════════════════════════════════
+   ARCILANA · tokens.css — FUENTE ÚNICA DE VERDAD DEL DISEÑO
+   v3.1 · Paleta actualizada con el color del logo de la marca:
+   verde oliva #4C5238 + marfil #EBD9BC (medidos de su imagen).
+   Ningún componente define colores por su cuenta.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Fuentes locales (sin Google Fonts en runtime) ── */
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/fraunces-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/playfair-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/dmsans-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/dmsans-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/dmsans-700.woff2") format("woff2");
+}
+
+:root {
+  /* ═══ Base neutra (domina el 80% del sitio) ═══ */
+  --crema: #faf3e6;
+  --blanco: #ffffff;
+  --tinta: #3a342c;
+  --tinta-suave: #8b8175;
+
+  /* ═══ Color de marca — el verde del logo (acción: botones, links, precios) ═══ */
+  --verde: #4c5238;
+  --verde-osc: #3b4129; /* hover / texto sobre verde */
+  --marfil: #ebd9bc; /* texto sobre verde (el crema de las letras del logo) */
+  --verde-hoja: #5f8b62; /* botones de WhatsApp (más brillante, código del canal) */
+
+  /* ═══ Colección vigente — rota en cada lanzamiento ═══ */
+  --acento: var(--verde);
+  --acento-suave: #e7ead8; /* pastel verde: fondos suaves, hovers, badges */
+
+  /* ═══ Pasteles de apoyo (micro-detalles, tonos de la referencia) ═══ */
+  --rosa: #e1c3cf;
+  --amarillo-pastel: #f2e2a0;
+  --miel: #dfa32b;
+  --rosa-suave: #f2e0e7;
+  --arena: #ead8bb;
+  --rojo-corazon: #c23d2e;
+
+  /* Sistema */
+  --f-logo:
+    "Playfair Display", "Fraunces", Georgia, serif; /* wordmark ARCILANA */
+  --f-titular: "Fraunces", Georgia, serif;
+  --f-cuerpo: "DM Sans", system-ui, sans-serif;
+  --radio: 16px;
+  --radio-pill: 999px;
+  --sombra: 0 10px 30px rgba(58, 52, 44, 0.08);
+  --trans: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --ancho: 1240px;
+}
+
+/* ═══ Colecciones futuras: solo agregar un bloque como este ═══
+[data-coleccion='nueva-coleccion'] {
+  --acento: var(--rosa);
+  --acento-suave: var(--rosa-suave);
+}
+═════════════════════════════════════════════════════════════ */
