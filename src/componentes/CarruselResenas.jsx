@@ -1,4 +1,4 @@
-import { RESENAS, promedio } from '../datos/resenas.js'
+import { RESENAS, promedio } from "../datos/resenas.js";
 
 // Carrusel horizontal de reseñas (scroll-snap: swipe en móvil)
 export default function CarruselResenas() {
@@ -8,7 +8,7 @@ export default function CarruselResenas() {
         <div className="cab-seccion reveal columna">
           <div>
             <div className="overline">Lo que dicen</div>
-            <h2>Clientas reales, amor real</h2>
+            <h2 className="titulo-resenas">Clientas reales, amor real</h2>
           </div>
           <div className="sello">
             <span className="estrellas">★★★★★</span>
@@ -19,16 +19,28 @@ export default function CarruselResenas() {
         <div className="carrusel-resenas reveal">
           {RESENAS.map((r) => (
             <article className="resena" key={r.id}>
-              <div className="estrellas" aria-label={`${r.calificacion} de 5 estrellas`}>
-                {'★'.repeat(r.calificacion)}
+              <div
+                className="estrellas"
+                aria-label={`${r.calificacion} de 5 estrellas`}
+              >
+                {"★".repeat(r.calificacion)}
               </div>
-              {r.foto && <img className="resena-foto" src={r.foto} alt={`Foto de ${r.nombre}`} loading="lazy" />}
+              {r.foto && (
+                <img
+                  className="resena-foto"
+                  src={r.foto}
+                  alt={`Foto de ${r.nombre}`}
+                  loading="lazy"
+                />
+              )}
               <p>“{r.texto}”</p>
               <div className="quien">
                 <div className="avatar">{r.iniciales}</div>
                 <div>
                   <div className="nombre">{r.nombre}</div>
-                  {r.verificada && <span className="chip-verificada">Compra verificada</span>}
+                  {r.verificada && (
+                    <span className="chip-verificada">Compra verificada</span>
+                  )}
                 </div>
               </div>
             </article>
@@ -36,9 +48,10 @@ export default function CarruselResenas() {
         </div>
 
         <p className="nota">
-          Reseñas reales recolectadas después de cada entrega. Si compraste, cuéntanos tu experiencia por WhatsApp 💛
+          Reseñas reales recolectadas después de cada entrega. Si compraste,
+          cuéntanos tu experiencia por WhatsApp 💛
         </p>
       </div>
     </section>
-  )
+  );
 }

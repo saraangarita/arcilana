@@ -4,7 +4,6 @@ import { COLECCION_ACTUAL } from "../datos/colecciones.js";
 import { porColeccion } from "../datos/productos.js";
 import TarjetaProducto from "../componentes/TarjetaProducto.jsx";
 import CarruselResenas from "../componentes/CarruselResenas.jsx";
-import BotonWhatsApp from "../componentes/BotonWhatsApp.jsx";
 
 const IMAGENES_CATEGORIA = {
   aretes: "/img/prod-aretes.webp",
@@ -19,7 +18,6 @@ export default function Inicio() {
 
   return (
     <>
-      {/* HERO — v3.3: sin texto sobre la foto, solo el botón centrado */}
       <section className="hero">
         <img
           src="/img/hero-cartagena.jpg"
@@ -47,9 +45,7 @@ export default function Inicio() {
           </div>
         </div>
       </div>
-      {/* COLECCIÓN VIGENTE — protagonismo inmediato: nombre + descripción
-          breve + los productos, como "El Jardín" de la referencia */}
-      <section className="seccion coleccion-sec" style={{ paddingTop: 56 }}>
+      <section className="seccion coleccion-sec" style={{ paddingTop: 1 }}>
         <div className="contenedor">
           <header className="col-home reveal">
             <h2 className="titulo-coleccion">
@@ -89,33 +85,9 @@ export default function Inicio() {
             el espíritu de la creatividad. Cada pieza tiene una historia que
             contar.”
           </blockquote>
-          <p>
-            Somos un estudio cartagenero donde cada accesorio se amasa, se pinta
-            y se hornea a mano. Sin moldes en serie, sin prisa: la belleza de lo
-            simple.
-          </p>
           <Link className="btn btn-crema" to="/nosotros">
             Conócenos más
           </Link>
-        </div>
-      </section>
-      {/* PEDIDOS ESPECIALES */}
-      <section className="seccion especiales-sec">
-        <div className="contenedor">
-          <div className="especiales reveal">
-            <div>
-              <div className="overline">Pedidos especiales</div>
-              <h2>¿Tienes una idea en mente?</h2>
-              <p>
-                Creamos piezas personalizadas para regalos, novias, marcas y
-                momentos únicos. Cuéntanos tu idea y la hacemos realidad, a mano
-                y con amor.
-              </p>
-            </div>
-            <BotonWhatsApp mensaje="Hola Arcilana ✿ tengo una idea para un pedido especial ✿">
-              Escríbenos
-            </BotonWhatsApp>
-          </div>
         </div>
       </section>
       {/* RESEÑAS */}

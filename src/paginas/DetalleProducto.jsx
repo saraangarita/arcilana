@@ -8,10 +8,6 @@ import GaleriaProducto from "../componentes/GaleriaProducto.jsx";
 import TarjetaProducto from "../componentes/TarjetaProducto.jsx";
 import CarruselResenas from "../componentes/CarruselResenas.jsx";
 import NoEncontrado from "./NoEncontrado.jsx";
-
-// Detalle de producto — inspirado en la referencia:
-// galería con zoom + precio (con descuento) + cantidad +
-// Agregar al carrito + Comprar ahora (WhatsApp) + métodos de pago.
 export default function DetalleProducto({ alAgregar }) {
   const { id } = useParams();
   const { agregar } = useCarrito();

@@ -91,7 +91,7 @@ export const PRODUCTOS = [
     precioAntes: null,
     imagenes: [
       { tipo: "modelo", src: "/img/productos/jarronmodelo.jpg" },
-      { tipo: "modelo", src: "/img/productos/jarronproducto.jpg" },
+      { tipo: "modelo", src: "/img/productos/jarronproducto.png" },
       // ⚠️ pendiente: foto "producto solo" del collar jarrón
     ],
     colores: ["Rosado", "Verde"],
@@ -119,21 +119,6 @@ export const PRODUCTOS = [
       "Tejido a mano mostacilla a mostacilla, un accesorio pequeño que acompaña tu día a día con color. ⚠️ Descripción provisional — reemplazar por el texto de la marca.",
     estado: "disponible",
     personalizable: false,
-  },
-  {
-    id: "pieza-personalizada",
-    nombre: "Pieza Personalizada",
-    categoria: "sets",
-    coleccion: "especiales",
-    precio: 50000, // ⚠️ ejemplo — "desde"
-    precioAntes: null,
-    imagenes: [],
-    colores: ["A tu gusto"],
-    material: "Cerámica esmaltada · diseño acordado contigo",
-    descripcion:
-      "¿Tienes una idea para un regalo, novias o tu marca? La diseñamos y creamos juntas, a mano y con amor.",
-    estado: "disponible",
-    personalizable: true,
   },
 ];
 

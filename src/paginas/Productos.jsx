@@ -3,11 +3,6 @@ import useDocumentosMeta from "../ganchos/useDocumentosMeta.js";
 import { PRODUCTOS } from "../datos/productos.js";
 import { COLECCIONES } from "../datos/colecciones.js";
 import TarjetaProducto from "../componentes/TarjetaProducto.jsx";
-
-// Catálogo. Dos modos:
-// 1) /productos                → todas las piezas con chips por categoría
-// 2) /productos?coleccion=…    → encabezado de colección con su historia
-//    (estilo "El Jardín" de la referencia) + las piezas de esa colección
 export default function Productos() {
   const [params] = useSearchParams();
   const idColeccion = params.get("coleccion");

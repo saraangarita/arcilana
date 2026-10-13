@@ -91,11 +91,11 @@
   font-size: 17px;
   color: var(--verde);
   display: block;
-  margin-top: 1px;
+  margin-top: 5px;
   opacity: 0.95;
 }
 .drawer-cab .logo-nombre {
-  font-size: 24px;
+  font-size: 17px;
 }
 .carrito-badge {
   position: absolute;
@@ -358,37 +358,38 @@
   width: 60%;
 }
 .agregar {
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  z-index: 2;
-  background: var(--crema);
-  color: var(--tinta);
-  border: none;
-  border-radius: var(--radio-pill);
-  padding: 12px;
-  font-family: var(--f-cuerpo);
-  font-weight: 700;
-  font-size: 13.5px;
-  cursor: pointer;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: var(--trans);
-  text-align: center;
-  display: inline-flex;
+  position: static;
+  display: flex;
   align-items: center;
   justify-content: center;
-}
-.prod-card:hover .agregar,
-.agregar:focus-visible {
+  width: 100%;
+  margin-top: 14px;
+  padding: 11px 14px;
+
+  background: transparent;
+  color: var(--rosa);
+  border: 1px solid var(--rosa);
+  border-radius: var(--radio-pill);
+
+  font-family: var(--f-cuerpo);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
   opacity: 1;
   transform: none;
+  transition: var(--trans);
 }
+
 .agregar:hover {
-  background: var(--verde);
-  color: var(--crema);
+  background: transparent;
+  color: var(--rosa);
+  border-color: var(--rosa);
 }
+
 .agregar[disabled] {
   cursor: not-allowed;
 }
@@ -418,33 +419,6 @@
 .catalogo {
   margin-bottom: 30px;
 }
-/* .chip-filtros {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 38px;
-}
-.chip-f {
-  border: 1.5px solid rgba(58, 52, 44, 0.2);
-  background: transparent;
-  border-radius: var(--radio-pill);
-  padding: 9px 20px;
-  font-family: var(--f-cuerpo);
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.2s;
-  color: var(--tinta);
-}
-.chip-f:hover {
-  border-color: var(--verde);
-  color: var(--verde);
-}
-.chip-f.on {
-  background: var(--verde);
-  border-color: var(--verde);
-  color: var(--crema);
-} */
 
 /* ── Banner colección ── */
 .coleccion {
@@ -487,7 +461,7 @@
 /* ── Manifiesto ── */
 .manifiesto {
   background: var(--verde);
-  color: var(--crema);
+  color: var(--rojo-corazon);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -514,9 +488,14 @@
   color: var(--amarillo-pastel);
 }
 .manifiesto p {
-  color: var(--rosa);
+  color: var(--rojo-corazon);
   max-width: 52ch;
   margin: 0 auto 34px;
+}
+.manifiesto .btn-crema {
+  background: var(--verde);
+  color: var(--rosa);
+  border: 1px solid var(--crema);
 }
 
 /* ── Proceso ── */
@@ -849,7 +828,7 @@
 .drawer-izq {
   left: 0;
   transform: translateX(-105%);
-  padding: 20px 24px;
+  padding: 14px 24px 20px;
 }
 .drawer-der {
   right: 0;
@@ -863,7 +842,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 16px;
+  padding-bottom: 8px;
   border-bottom: 1px solid rgba(58, 52, 44, 0.1);
 }
 .drawer-cab h3 {
@@ -876,7 +855,7 @@
 }
 .drawer-nav a {
   font-family: var(--f-titular);
-  font-size: 24px;
+  font-size: 19px;
   padding: 10px 0;
   border-bottom: 1px solid rgba(58, 52, 44, 0.07);
   transition: var(--trans);
@@ -888,6 +867,8 @@
 }
 .drawer .btn {
   margin-top: 12px;
+  padding: 10px 20px;
+  font-size: 13px;
 }
 .drawer-pie {
   margin-top: auto;
@@ -1369,14 +1350,21 @@
     display: none;
   }
   .hero {
-    height: 72vh;
-    .hero img {
-      object-position: 70% 35%;
-    }
-    min-height: 480px;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+  }
+  .hero img {
+    position: absolute;
+    inset: 0;
+    object-position: 98% 50%;
   }
   .hero-texto {
-    padding-bottom: 40px;
+    padding-bottom: 13px;
+  }
+  .hero-ctas .btn {
+    padding: 9px 20px;
+    font-size: 13px;
   }
   .hero h1 {
     font-size: 38px;
@@ -1480,7 +1468,7 @@
   margin-top: 3px;
 }
 .precio-linea .precio {
-  font-family: var(--f-titular);
+  font-family: var(--f-cuerpo);
   font-size: 16px;
   color: var(--verde);
 }
@@ -1491,7 +1479,6 @@
   font-family: var(--f-cuerpo);
 }
 
-/* ── Colección en el inicio (estilo "El Jardín") ── */
 .col-home {
   text-align: center;
   max-width: 760px;
@@ -1499,7 +1486,7 @@
 }
 .col-home .titulo-coleccion {
   color: var(--verde);
-  margin: 12px 0 18px;
+  margin: 0px 0 18px;
 }
 .col-home p {
   max-width: 60ch;
@@ -1716,4 +1703,69 @@
 }
 .nota.izquierda {
   text-align: left;
+}
+
+.pagina-nosotros .contenedor {
+  max-width: 700px;
+}
+.pagina-nosotros .nosotros-tarjeta {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto 28px;
+  border-radius: 16px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 640px) {
+  .pagina-nosotros .contenedor {
+    padding: 0 18px;
+  }
+  .pagina-nosotros .nosotros-tarjeta {
+    margin-bottom: 18px;
+    border-radius: 12px;
+  }
+  /* Manifiesto en móvil */
+  .manifiesto blockquote {
+    font-size: 19px;
+    line-height: 1.4;
+  }
+  .manifiesto .btn-crema {
+    color: var(--rosa);
+  }
+}
+
+#resenas .cab-seccion h2.titulo-resenas {
+  color: var(--rosa);
+  font-size: clamp(22px, 2.9vw, 32px);
+}
+/* ── Página de colección: más aire entre elementos ── */
+.pagina-catalogo .volver-tienda {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.col-cab {
+  margin-bottom: 40px;
+}
+.col-cab .overline {
+  margin-bottom: 14px;
+}
+.col-cab .titulo-coleccion {
+  margin: 0 0 22px;
+}
+.col-cab p {
+  line-height: 1.7;
+  margin: 0 0 16px;
+}
+.col-cab p:last-child {
+  margin-bottom: 0;
 }

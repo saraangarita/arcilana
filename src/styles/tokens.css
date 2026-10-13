@@ -1,10 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   ARCILANA · tokens.css — FUENTE ÚNICA DE VERDAD DEL DISEÑO
-   v3.1 · Paleta actualizada con el color del logo de la marca:
-   verde oliva #4C5238 + marfil #EBD9BC (medidos de su imagen).
-   Ningún componente define colores por su cuenta.
-   ═══════════════════════════════════════════════════════════ */
-
 /* ── Fuentes locales (sin Google Fonts en runtime) ── */
 @font-face {
   font-family: "Fraunces";
@@ -75,10 +68,3 @@
   --trans: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --ancho: 1240px;
 }
-
-/* ═══ Colecciones futuras: solo agregar un bloque como este ═══
-[data-coleccion='nueva-coleccion'] {
-  --acento: var(--rosa);
-  --acento-suave: var(--rosa-suave);
-}
-═════════════════════════════════════════════════════════════ */

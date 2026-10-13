@@ -1,11 +1,11 @@
-import useDocumentosMeta from '../ganchos/useDocumentosMeta.js'
-import { POLITICAS } from '../datos/politicas.js'
+import useDocumentosMeta from "../ganchos/useDocumentosMeta.js";
+import { POLITICAS } from "../datos/politicas.js";
 
 // Página genérica para envíos / cambios / cuidado / privacidad.
 // El contenido vive en datos/politicas.js
 export default function Politica({ slug }) {
-  const pagina = POLITICAS[slug]
-  useDocumentosMeta(pagina.titulo, pagina.intro)
+  const pagina = POLITICAS[slug];
+  useDocumentosMeta(pagina.titulo, pagina.intro);
 
   return (
     <section className="seccion pagina-politica">
@@ -20,10 +20,12 @@ export default function Politica({ slug }) {
         {pagina.bloques.map((b) => (
           <div className="politica-bloque reveal" key={b.subtitulo}>
             <h2>{b.subtitulo}</h2>
-            {b.parrafos.map((p, i) => <p key={i}>{p}</p>)}
+            {b.parrafos.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
           </div>
         ))}
       </div>
     </section>
-  )
+  );
 }
