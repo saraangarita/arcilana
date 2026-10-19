@@ -1,6 +1,5 @@
 import { RESENAS, promedio } from "../datos/resenas.js";
 
-// Carrusel horizontal de reseñas (scroll-snap: swipe en móvil)
 export default function CarruselResenas() {
   return (
     <section className="seccion" id="resenas">

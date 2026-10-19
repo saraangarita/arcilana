@@ -116,31 +116,10 @@ export default function DetalleProducto({ alAgregar }) {
                 El pago y el envío se coordinan al confirmar tu pedido por
                 WhatsApp.
               </span>
-              <span>
-                🚚 Envíos a toda Colombia · preparación en 1–3 días hábiles
-              </span>
+              <span>🚚 Envíos a toda Colombia·</span>
             </div>
 
             <p className="detalle-descripcion">{producto.descripcion}</p>
-
-            <dl className="detalle-datos">
-              <div>
-                <dt>Colores</dt>
-                <dd>{producto.colores.join(" · ")}</dd>
-              </div>
-              <div>
-                <dt>Material</dt>
-                <dd>{producto.material}</dd>
-              </div>
-              <div>
-                <dt>Envío</dt>
-                <dd>
-                  A toda Colombia, se confirma por WhatsApp ·{" "}
-                  <Link to="/envios">más info</Link>
-                </dd>
-              </div>
-            </dl>
-
             <p className="nota izquierda">
               Te respondemos en horario de atención (L–V 9:00–6:00). Si escribes
               fin de semana, te escribimos el lunes 💛

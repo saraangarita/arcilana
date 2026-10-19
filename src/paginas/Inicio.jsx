@@ -55,13 +55,11 @@ export default function Inicio() {
             </h2>
             <p>{COLECCION_ACTUAL.descripcion1}</p>
           </header>
-
           <div className="grid-productos catalogo">
             {porColeccion(COLECCION_ACTUAL.id).map((p) => (
               <TarjetaProducto key={p.id} producto={p} />
             ))}
           </div>
-
           <p className="centrada-link"></p>
         </div>
       </section>

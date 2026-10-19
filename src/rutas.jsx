@@ -1,13 +1,12 @@
-import { Routes, Route } from 'react-router-dom'
-import Inicio from './paginas/Inicio.jsx'
-import Productos from './paginas/Productos.jsx'
-import DetalleProducto from './paginas/DetalleProducto.jsx'
-import Nosotros from './paginas/Nosotros.jsx'
-import Contacto from './paginas/Contacto.jsx'
-import Politica from './paginas/Politica.jsx'
-import NoEncontrado from './paginas/NoEncontrado.jsx'
+import { Routes, Route } from "react-router-dom";
+import Inicio from "./paginas/Inicio.jsx";
+import Productos from "./paginas/Productos.jsx";
+import DetalleProducto from "./paginas/DetalleProducto.jsx";
+import Nosotros from "./paginas/Nosotros.jsx";
+import Contacto from "./paginas/Contacto.jsx";
+import Politica from "./paginas/Politica.jsx";
+import NoEncontrado from "./paginas/NoEncontrado.jsx";
 
-// ═══ Todas las rutas del sitio en un solo archivo ═══
 export default function Rutas({ alAbrirCarrito }) {
   return (
     <Routes>
@@ -25,5 +24,5 @@ export default function Rutas({ alAbrirCarrito }) {
       <Route path="/privacidad" element={<Politica slug="privacidad" />} />
       <Route path="*" element={<NoEncontrado />} />
     </Routes>
-  )
+  );
 }

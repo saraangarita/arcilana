@@ -1,16 +1,16 @@
-import { useState } from 'react'
-import Rutas from './rutas.jsx'
-import TopBar from './componentes/TopBar.jsx'
-import Header from './componentes/Header.jsx'
-import Footer from './componentes/Footer.jsx'
-import NavMovil from './componentes/NavMovil.jsx'
-import Carrito from './componentes/Carrito.jsx'
-import useReveal from './ganchos/useReveal.js'
+import { useState } from "react";
+import Rutas from "./rutas.jsx";
+import TopBar from "./componentes/TopBar.jsx";
+import Header from "./componentes/Header.jsx";
+import Footer from "./componentes/Footer.jsx";
+import NavMovil from "./componentes/NavMovil.jsx";
+import Carrito from "./componentes/Carrito.jsx";
+import useReveal from "./ganchos/useReveal.js";
 
 export default function App() {
-  const [menuAbierto, setMenuAbierto] = useState(false)
-  const [carritoAbierto, setCarritoAbierto] = useState(false)
-  useReveal() // scroll-to-top + animaciones de aparición por ruta
+  const [menuAbierto, setMenuAbierto] = useState(false);
+  const [carritoAbierto, setCarritoAbierto] = useState(false);
+  useReveal();
 
   return (
     <>
@@ -24,9 +24,11 @@ export default function App() {
       </main>
       <Footer />
       <NavMovil abierto={menuAbierto} alCerrar={() => setMenuAbierto(false)} />
-      <Carrito abierto={carritoAbierto} alCerrar={() => setCarritoAbierto(false)} />
+      <Carrito
+        abierto={carritoAbierto}
+        alCerrar={() => setCarritoAbierto(false)}
+      />
 
-      {/* WhatsApp flotante */}
       <a
         className="wa-fab"
         href="https://wa.me/573225099012?text=Hola%20Arcilana%20%E2%9C%BF%20quiero%20preguntar%20por%20sus%20piezas"
@@ -39,5 +41,5 @@ export default function App() {
         </svg>
       </a>
     </>
-  )
+  );
 }

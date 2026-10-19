@@ -1,8 +1,8 @@
 export const COLECCIONES = {
   "la-magia-de-lo-cotidiano": {
     id: "la-magia-de-lo-cotidiano",
-    nombre: "La Magia de lo Cotidiano",
-    lineas: ["La magia de lo cotidiano"],
+    nombre: "Así surgió nuestra colección",
+    lineas: ["Así surgió nuestra colección"],
     descripcion1:
       "Esta colección nace de la idea de encontrar belleza en los objetos y momentos que nos acompañan todos los días.",
     descripcion2:
@@ -12,7 +12,6 @@ export const COLECCIONES = {
   },
 };
 
-// La colección que se muestra destacada en el inicio
 export const COLECCION_ACTUAL =
   Object.values(COLECCIONES).find((c) => c.vigente) ||
   Object.values(COLECCIONES)[0];

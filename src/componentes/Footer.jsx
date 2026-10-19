@@ -80,22 +80,15 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4>Ayuda</h4>
+            <h4>Terminos y condiciones</h4>
             <ul>
               <li>
-                <Link to="/envios">Envíos</Link>
-              </li>
-              <li>
-                <Link to="/cambios">Cambios y retracto</Link>
-              </li>
-              <li>
-                <Link to="/cuidado">Cuidado de las piezas</Link>
-              </li>
-              <li>
-                <Link to="/privacidad">Privacidad</Link>
-              </li>
-              <li>
-                <Link to="/contacto">Pedidos especiales</Link>
+                <a
+                  href="/terminos-y-condiciones.pdf"
+                  download="Terminos-y-condiciones.pdf"
+                >
+                  Descargar términos y condiciones (PDF)
+                </a>
               </li>
             </ul>
           </div>

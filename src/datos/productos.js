@@ -1,18 +1,3 @@
-// ═══════════════════════════════════════════════════════════
-// ARCILANA · Catálogo — Colección "La Magia de lo Cotidiano"
-// Fotos reales de la marca (productos/).
-// ⚠️ PRECIOS DE EJEMPLO — reemplazar por los reales.
-//
-// Cómo manejar cada cosa:
-// • DESCUENTO → agrega `precioAntes` (se muestra tachado + badge "-%" calculado
-//   solo). Para quitar el descuento, borra `precioAntes`.
-// • AGOTADO   → `estado: 'agotado'` (se pone el velo "Agotado" y se
-//   desactivan los botones). Otros estados: 'nuevo' | 'disponible'.
-// • FOTOS     → `imagenes: [{ tipo: 'modelo'|'producto', src }]`
-//   En las tarjetas: se muestra la de "modelo" y al pasar el mouse
-//   cambia a la de "producto". En el detalle se pueden ver todas con zoom.
-// ═══════════════════════════════════════════════════════════
-
 export const CATEGORIAS = [
   { id: "aretes", nombre: "Aretes" },
   { id: "collares", nombre: "Collares" },
@@ -28,8 +13,8 @@ export const PRODUCTOS = [
     nombre: "Aretes Nostalgia",
     categoria: "aretes",
     coleccion: COLECCION_VIGENTE,
-    precio: 35000, // ⚠️ precio de ejemplo
-    precioAntes: null, // ej: 42000 → muestra "-17%" y precio tachado
+    precio: 50000,
+    precioAntes: null,
     imagenes: [
       { tipo: "producto", src: "/img/productos/espiral1.jpg" },
       { tipo: "producto", src: "/img/productos/espiral2.png" },
@@ -39,8 +24,10 @@ export const PRODUCTOS = [
     colores: ["Verde petróleo", "Rosa"],
     material: "Cerámica esmaltada · poste de acero quirúrgico",
     descripcion:
-      "Los aretes nostalgia representan la capacidad de convertir un objeto cotidiano, muchas veces desechado, en un accesorio delicado y lleno de significado.",
-    estado: "nuevo", // nuevo | disponible | agotado
+      "Arete hecho en cerámica, con soporte en acero.\n" +
+      "Los aretes nostalgia representan la capacidad de convertir un objeto cotidiano, muchas veces desechado, en un accesorio delicado y lleno de significado.\n" +
+      "Medidas: 3 cm.",
+    estado: "nuevo",
     personalizable: false,
   },
   {
@@ -48,18 +35,19 @@ export const PRODUCTOS = [
     nombre: "Collar Espiral",
     categoria: "collares",
     coleccion: COLECCION_VIGENTE,
-    precio: 40000, // ⚠️ precio de ejemplo
-    precioAntes: 48000, // ⚠️ descuento de EJEMPLO para probar la funcionalidad — borrar si no aplica
+    precio: 65000,
+    precioAntes: 48000,
     imagenes: [
       { tipo: "modelo", src: "/img/productos/espiralmodelo.jpg" },
       { tipo: "modelo", src: "/img/productos/collarespiral.png" },
-      // { tipo: "producto", src: "/img/productos/espiral-producto.webp" },
     ],
     colores: ["Piedras naturales", "Caracol de cerámica"],
     material:
       "Piedras y mostacillas de vidrio · caracol central de cerámica esmaltada · cierre dorado",
     descripcion:
-      "Nos invita a confiar en nuestro propio ritmo, a disfrutar el recorrido y a entender que ir despacio no significa estar detenido. Porque muchas veces, mientras buscamos llegar a nuestro destino, olvidamos mirar todo lo bonito que ocurre en el camino.",
+      "Dije hecho en ceramica, con broche en acero y piedras naturales.\n" +
+      "Nos invita a confiar en nuestro propio ritmo, a disfrutar el recorrido y a entender que ir despacio no significa estar detenido. Porque muchas veces, mientras buscamos llegar a nuestro destino, olvidamos mirar todo lo bonito que ocurre en el camino.\n" +
+      "Medidas: 3.2cm.",
     estado: "disponible",
     personalizable: false,
   },
@@ -68,7 +56,7 @@ export const PRODUCTOS = [
     nombre: "Collar Fresa Nevada",
     categoria: "collares",
     coleccion: COLECCION_VIGENTE,
-    precio: 45000, // ⚠️ precio de ejemplo
+    precio: 80000,
     precioAntes: null,
     imagenes: [
       { tipo: "modelo", src: "/img/productos/fresamodelo.jpg" },
@@ -78,7 +66,9 @@ export const PRODUCTOS = [
     material:
       "Fresa de cerámica esmaltada · cuerda encerada roja · nudo ajustable",
     descripcion:
-      "Una pequeña fresa que celebra la dulzura escondida en los momentos más simples. Un recordatorio de que lo cotidiano también puede ser extraordinario.",
+      "Dije hecho en cerámica,  sujetada de un cordón plano gamuzado de color rojo.\n" +
+      "Una pequeña fresa que celebra la dulzura escondida en los momentos más simples. Un recordatorio de que lo cotidiano también puede ser extraordinario.\n" +
+      "Medidas: 4cm.",
     estado: "nuevo",
     personalizable: false,
   },
@@ -87,18 +77,19 @@ export const PRODUCTOS = [
     nombre: "Collar Jarrón",
     categoria: "collares",
     coleccion: COLECCION_VIGENTE,
-    precio: 45000, // ⚠️ precio de ejemplo
+    precio: 80000,
     precioAntes: null,
     imagenes: [
       { tipo: "modelo", src: "/img/productos/jarronmodelo.jpg" },
       { tipo: "modelo", src: "/img/productos/jarronproducto.png" },
-      // ⚠️ pendiente: foto "producto solo" del collar jarrón
     ],
     colores: ["Rosado", "Verde"],
     material:
       "Jarroncito de cerámica esmaltada · cuerda encerada · nudo ajustable",
     descripcion:
-      "Una pieza que rinde homenaje a esos rincones cotidianos llenos de calma, memoria e inspiración, como lo es nuestro “hogar”.",
+      "Dije hecho en ceramica, sujetado de un cordón plano gamuzado de color café.\n" +
+      "Una pieza que rinde homenaje a esos rincones cotidianos llenos de calma, memoria e inspiración, como lo es nuestro hogar\n" +
+      "Medidas: 4 cm.",
     estado: "disponible",
     personalizable: false,
   },
@@ -107,22 +98,23 @@ export const PRODUCTOS = [
     nombre: "Collar Miyuki",
     categoria: "collares",
     coleccion: COLECCION_VIGENTE,
-    precio: 38000, // ⚠️ precio de ejemplo
+    precio: 30000,
     precioAntes: null,
     imagenes: [
       { tipo: "modelo", src: "/img/productos/miyuki.jpg" },
       { tipo: "modelo", src: "/img/productos/collarmiyuki.png" },
     ],
-    colores: ["Multicolor"], // ⚠️ provisional
-    material: "Mostacillas miyuki tejidas a mano · cierre ajustable", // ⚠️ provisional
+    colores: ["Multicolor"],
+    material: "Mostacillas miyuki tejidas a mano · cierre ajustable",
     descripcion:
-      "Tejido a mano mostacilla a mostacilla, un accesorio pequeño que acompaña tu día a día con color. ⚠️ Descripción provisional — reemplazar por el texto de la marca.",
+      "Dije hecho en cerámica, con piedras miyuki japonesa, con hilo resistente y broches en acero.\n" +
+      "Inspirado en los recuerdos que deja el mar, en su calma y en la belleza de encontrar algo especial en las cosas más sencillas.\n" +
+      "Medidas: 3cm ",
     estado: "disponible",
     personalizable: false,
   },
 ];
 
-// Helpers
 export const porId = (id) => PRODUCTOS.find((p) => p.id === id);
 export const porColeccion = (idColeccion) =>
   PRODUCTOS.filter((p) => p.coleccion === idColeccion);

@@ -1,15 +1,10 @@
 import { Link } from "react-router-dom";
 import { fmt, linkWhatsApp } from "../datos/config.js";
 import { useCarrito } from "../contexto/CarritoContexto.jsx";
-import { descuentoDe } from "../datos/productos.js";
 
-// Tarjeta de producto: muestra la foto de la MODELO y al pasar
-// el mouse cambia a la foto del PRODUCTO (efecto de tiendas).
-// Soporta badge de descuento (-%) y estado agotado.
 export default function TarjetaProducto({ producto }) {
   const { agregar } = useCarrito();
   const agotado = producto.estado === "agotado";
-  const descuento = descuentoDe(producto);
 
   const fotoPrincipal =
     producto.imagenes?.find((i) => i.tipo === "modelo")?.src ||
@@ -25,17 +20,6 @@ export default function TarjetaProducto({ producto }) {
   return (
     <article className={`prod-card reveal ${agotado ? "agotado" : ""}`}>
       <div className="prod-foto">
-        {producto.estado === "nuevo" && (
-          <span className="tag tag-nuevo">Nuevo</span>
-        )}
-        {descuento > 0 && !agotado && (
-          <span className="tag tag-descuento">-{descuento}%</span>
-        )}
-        {agotado && <span className="tag tag-agotado">Agotado</span>}
-        {producto.personalizable && !agotado && (
-          <span className="tag tag-pers">Personalizable</span>
-        )}
-
         <Link to={`/productos/${producto.id}`} aria-label={producto.nombre}>
           {fotoPrincipal ? (
             <>
@@ -79,9 +63,6 @@ export default function TarjetaProducto({ producto }) {
 
           <div className="precio-linea">
             <span className="precio">{fmt(producto.precio)}</span>
-            {descuento > 0 && (
-              <span className="precio-antes">{fmt(producto.precioAntes)}</span>
-            )}
           </div>
         </Link>
 

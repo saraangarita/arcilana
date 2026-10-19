@@ -1,19 +1,17 @@
-import { useRef, useState } from 'react'
+import { useRef, useState } from "react";
 
-// Zoom de imagen: en desktop sigue el cursor (lupa), y al hacer clic
-// abre la foto en pantalla completa (también sirve en móvil).
 export default function ZoomImagen({ src, alt }) {
-  const ref = useRef(null)
-  const [zoom, setZoom] = useState(false)
-  const [origen, setOrigen] = useState('50% 50%')
-  const [lightbox, setLightbox] = useState(false)
+  const ref = useRef(null);
+  const [zoom, setZoom] = useState(false);
+  const [origen, setOrigen] = useState("50% 50%");
+  const [lightbox, setLightbox] = useState(false);
 
   const mover = (e) => {
-    const r = ref.current.getBoundingClientRect()
-    const x = ((e.clientX - r.left) / r.width) * 100
-    const y = ((e.clientY - r.top) / r.height) * 100
-    setOrigen(`${x}% ${y}%`)
-  }
+    const r = ref.current.getBoundingClientRect();
+    const x = ((e.clientX - r.left) / r.width) * 100;
+    const y = ((e.clientY - r.top) / r.height) * 100;
+    setOrigen(`${x}% ${y}%`);
+  };
 
   return (
     <>
@@ -26,15 +24,20 @@ export default function ZoomImagen({ src, alt }) {
         onClick={() => setLightbox(true)}
         role="button"
         tabIndex={0}
-        onKeyDown={(e) => e.key === 'Enter' && setLightbox(true)}
+        onKeyDown={(e) => e.key === "Enter" && setLightbox(true)}
         aria-label={`${alt} — ampliar foto`}
       >
         <img
           src={src}
           alt={alt}
-          style={{ transformOrigin: origen, transform: zoom ? 'scale(2.1)' : 'scale(1)' }}
+          style={{
+            transformOrigin: origen,
+            transform: zoom ? "scale(2.1)" : "scale(1)",
+          }}
         />
-        <span className="zoom-pista" aria-hidden="true">🔍</span>
+        <span className="zoom-pista" aria-hidden="true">
+          🔍
+        </span>
       </div>
 
       {lightbox && (
@@ -46,9 +49,11 @@ export default function ZoomImagen({ src, alt }) {
           aria-label="Foto ampliada"
         >
           <img src={src} alt={alt} />
-          <button className="lightbox-cerrar" aria-label="Cerrar foto ampliada">✕</button>
+          <button className="lightbox-cerrar" aria-label="Cerrar foto ampliada">
+            ✕
+          </button>
         </div>
       )}
     </>
-  )
+  );
 }

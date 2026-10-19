@@ -1,7 +1,5 @@
 import { NavLink } from "react-router-dom";
 import { MARCA, linkWhatsApp } from "../datos/config.js";
-
-// Menú lateral para móvil
 export default function NavMovil({ abierto, alCerrar }) {
   return (
     <>

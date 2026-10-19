@@ -1,8 +1,6 @@
 import useDocumentosMeta from "../ganchos/useDocumentosMeta.js";
 import { POLITICAS } from "../datos/politicas.js";
 
-// Página genérica para envíos / cambios / cuidado / privacidad.
-// El contenido vive en datos/politicas.js
 export default function Politica({ slug }) {
   const pagina = POLITICAS[slug];
   useDocumentosMeta(pagina.titulo, pagina.intro);
