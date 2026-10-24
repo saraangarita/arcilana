@@ -20,8 +20,11 @@ export default function Inicio() {
     <>
       <section className="hero">
         <img
-          src="/img/hero-cartagena.jpg"
-          alt="Daniela, fundadora de Arcilana, en las calles de Cartagena"
+          src="/img/hero-desktop.webp"
+          srcSet="/img/hero-movil.webp 1080w, /img/hero-desktop.webp 1920w"
+          sizes="100vw"
+          fetchpriority="high"
+          alt="Daniela, fundadora de Arcilana, con el guion de La Magia de lo Cotidiano en Cartagena"
         />
         <div className="hero-texto">
           <div className="contenedor">

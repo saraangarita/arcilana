@@ -15,11 +15,28 @@
       property="og:description"
       content="Accesorios de arcilla hechos a mano en Cartagena, Colombia. Piezas únicas, envíos a toda Colombia."
     />
-    <meta property="og:image" content="/img/hero-cartagena.webp" />
+    <meta
+      property="og:image"
+      content="https://arcilana.vercel.app/img/hero-desktop.webp"
+    />
     <meta property="og:locale" content="es_CO" />
     <meta name="theme-color" content="#FAF3E6" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="preload"
+      as="image"
+      href="/img/hero-preload.png"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/img/hero-desktop.webp"
+      imagesrcset="/img/hero-movil.webp 1080w, /img/hero-desktop.webp 1920w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
 
     <link
       rel="preload"

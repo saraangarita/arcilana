@@ -84,8 +84,10 @@ export default function Footer() {
             <ul>
               <li>
                 <a
-                  href="/terminos-y-condiciones.pdf"
-                  download="Terminos-y-condiciones.pdf"
+                  href="/terminos-condiciones-arcilana.pdf"
+                  download="Terminos-y-condiciones-Arcilana.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Descargar términos y condiciones (PDF)
                 </a>
